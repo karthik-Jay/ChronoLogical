@@ -8,7 +8,11 @@ namespace ChronoLogical.Api.Data
             : base(options)
         {
         }
+
         public DbSet<Model.TimeEntry> TimeEntries { get; set; } = null!;
+        public DbSet<Model.WorkProject> Projects { get; set; } = null!;
+        public DbSet<Model.WorkTask> Tasks { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ChronoLogicalContext).Assembly);

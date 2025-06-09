@@ -30,11 +30,6 @@ namespace ChronoLogical.Api.Data.Configurations
                    .IsUnicode(true)
                    .IsRequired(false);
 
-            builder.Property(te => te.ProjectCode)
-                   .HasMaxLength(50)
-                   .IsUnicode(false)
-                   .IsRequired(true);
-
             builder.Property(te => te.TaskId)
                    .HasMaxLength(50)
                    .IsUnicode(false);
@@ -42,9 +37,6 @@ namespace ChronoLogical.Api.Data.Configurations
             // indexes for performance
             builder.HasIndex(e => e.StartTime)
                   .HasDatabaseName("IX_TimeEntries_StartTime");
-
-            builder.HasIndex(e => e.ProjectCode)
-                   .HasDatabaseName("IX_TimeEntries_ProjectCode");
 
             builder.HasIndex(e => e.TaskId)
                    .HasDatabaseName("IX_TimeEntries_TaskId");
