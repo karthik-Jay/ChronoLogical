@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A5AB75B9-3BD0-48F0-BFB4-FD2C8C616848}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoLogical.Api", "src\ChronoLogical.Api\ChronoLogical.Api.csproj", "{5C083DDC-42AF-41FB-9E9A-B8AF501E222F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoLogical.Api", "ChronoLogical.Api\ChronoLogical.Api.csproj", "{965CAF61-2676-B96C-6402-DEACDBC4F62C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5C083DDC-42AF-41FB-9E9A-B8AF501E222F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C083DDC-42AF-41FB-9E9A-B8AF501E222F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C083DDC-42AF-41FB-9E9A-B8AF501E222F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C083DDC-42AF-41FB-9E9A-B8AF501E222F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965CAF61-2676-B96C-6402-DEACDBC4F62C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965CAF61-2676-B96C-6402-DEACDBC4F62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965CAF61-2676-B96C-6402-DEACDBC4F62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965CAF61-2676-B96C-6402-DEACDBC4F62C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{5C083DDC-42AF-41FB-9E9A-B8AF501E222F} = {A5AB75B9-3BD0-48F0-BFB4-FD2C8C616848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1A20439-5F09-4B7A-B603-B083C54BECB6}
