@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { DayPilot, DayPilotCalendar } from "@daypilot/daypilot-lite-react";
+import { DayPilot, DayPilotNavigator, DayPilotCalendar } from "@daypilot/daypilot-lite-react";
 import { Box, Dialog, DialogTitle, DialogContent, TextField, DialogActions, Button } from "@mui/material";
 import TimeEntryApi from "../service/timeEntryApi.ts";
 
@@ -17,6 +17,7 @@ export default function WeekViewCalendar() {
   const [description, setDescription] = useState("");
   const [duration, setDuration] = useState<number>(1);
   const [selectedStart, setSelectedStart] = useState<string | null>(null);
+  const [weekStartDate, setWeekStartDate] = useState<DayPilot.Date>(DayPilot.Date.today().firstDayOfWeek());
 
   // Handle time range selection
   const onTimeRangeSelected = async (args: any) => {
@@ -34,6 +35,14 @@ export default function WeekViewCalendar() {
       )
     );
     // Optionally update backend here
+  };
+
+  // Handle navigator time range selection
+  const onNavigatorTimeRangeSelect = (args: any) => {
+    console.log("Navigator time range selected:", args);
+    const newstartstring = args.start.value.toString();
+    const newStart = new DayPilot.Date(newstartstring);
+    setWeekStartDate(newStart.firstDayOfWeek());
   };
 
   // Add new event
@@ -64,11 +73,14 @@ export default function WeekViewCalendar() {
 
   return (
     <Box>
+      <DayPilotNavigator
+        onTimeRangeSelect={onNavigatorTimeRangeSelect}/>
       <DayPilotCalendar
         ref={calendarRef}
         viewType="Week"
         events={events}
         durationBarVisible={false}
+        startDate={weekStartDate}
         onTimeRangeSelected={onTimeRangeSelected}
         onEventMove={onEventMove}
         heightSpec="Full"
